@@ -1,0 +1,76 @@
+/* General Styles */
+.info-text {
+    margin-bottom: 30px;
+  }
+  
+  #theme3 {
+    width: 210mm; /* A4 width */
+    margin: auto;
+    max-height: 297mm; /* A4 height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden;
+    border: 1px solid #ccc;
+    padding: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  #theme3::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #theme3::-webkit-scrollbar-thumb {
+    background-color: #D2E4E1;
+    border-radius: 4px;
+  }
+  
+  #theme3::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive Design */
+  @media only screen and (max-width: 715px) {
+    #theme3 {
+      padding: 47px 19px;
+    }
+  
+    .info-text {
+      width: 290px;
+    }
+  
+    .summary-text {
+      width: 100% !important;
+    }
+  }
+  
+  @media only screen and (max-width: 430px) {
+    #theme3 {
+      padding: 14px 10px;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    #theme3 {
+      width: 100%; /* Full width for print */
+      height: auto; /* Expand to fit content */
+      max-height: none; /* Disable max-height for print */
+      overflow: visible; /* Ensure all content is visible */
+      border: none; /* Remove border for cleaner print */
+      box-shadow: none; /* Remove shadow for print */
+      page-break-inside: avoid; /* Avoid breaking sections awkwardly */
+    }
+  
+    .info-text {
+      width: auto; /* Adjust width for print */
+    }
+  
+    .summary-text {
+      width: 100% !important;
+    }
+  
+    #theme3::-webkit-scrollbar {
+      display: none; /* Hide scrollbar */
+    }
+  }
+  
